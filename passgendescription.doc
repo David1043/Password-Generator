@@ -1,0 +1,55 @@
+'ALPHABET' CLASS:-
+
+->Purpose: This class represents a pool of characters (uppercase letters, lowercase letters, numbers, symbols) that can be used to generate passwords.
+->Fields:
+UPPERCASE_LETTERS, LOWERCASE_LETTERS, NUMBERS, SYMBOLS: Constants representing different character sets.
+->pool: A StringBuilder that accumulates selected character sets based on user preferences.
+_>Constructor: Initializes the pool based on user preferences (uppercaseIncluded, lowercaseIncluded, numbersIncluded, specialCharactersIncluded).
+->Method:
+getAlphabet(): Returns the combined character pool as a string.
+
+
+'PASSWORD' CLASS:-
+
+->Purpose: Represents a password with methods to calculate its strength score based on various criteria.
+->Fields:
+->value: Stores the actual password string.
+->Constructor:
+->Password(String s): Initializes the password with the provided string s.
+->Methods:
+->calculateScore(): Evaluates the password's strength based on:
+Presence of uppercase letters.
+Presence of lowercase letters.
+Presence of digits.
+Presence of symbols.
+Length of the password.
+->toString(): Overrides Object's toString() method to return the password string.
+
+
+'GENERATOR' CLASS:-
+
+->Purpose: Manages user interaction, password generation, and strength checking functionalities.
+->Fields:
+->alphabet: Instance of Alphabet class used for character pool.
+->keyboard: Static Scanner instance for user input.
+->Constructor: Initializes the alphabet instance based on user preferences.
+->Methods:
+->mainLoop(): Main program loop that displays a menu and handles user commands until termination.
+->generatePassword(int length): Generates a password of specified length using characters from alphabet.
+->printUsefulInfo(): Prints tips on password security.
+->requestPassword(): Prompts user for password preferences and generates a password accordingly.
+->isInclude(String input): Checks if user input is affirmative (yes).
+->passwordRequestError(String input): Displays error message for invalid user input.
+->checkPassword(): Checks the strength of a user-entered password.
+->printMenu(): Displays the main menu options.
+->printQuitMessage(): Displays a closing message and terminates the program.
+->main(String[] args): Main entry point to start the program.
+
+
+SUMMARY:-
+
+->Functionality: The application allows users to generate passwords based on selected criteria (uppercase, lowercase, numbers, symbols) and check the strength of passwords they input.
+->User Interaction: Uses Scanner for input, displays menus and prompts for user preferences.
+->Password Strength: Calculates password strength based on length and presence of different character types.
+->Security Tips: Provides useful information on password security practices.
+This code provides a basic implementation for a password generator and checker, suitable for learning and simple applications but may need enhancements for production-level use (e.g., handling more complex password policies, secure input handling).
